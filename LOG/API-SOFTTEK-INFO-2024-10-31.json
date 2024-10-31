@@ -34,3 +34,39 @@
 {"context":"RouterExplorer","level":"info","message":"Mapped {/api/v1/users/:id, DELETE} route","timestamp":"2024-10-31 10:49:34.191 AM"}
 {"context":"NestApplication","level":"info","message":"Nest application successfully started","timestamp":"2024-10-31 10:49:34.199 AM"}
 {"context":"bootstrap","level":"info","message":"Server listening: http://[::1]:3000","timestamp":"2024-10-31 10:49:34.209 AM"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","timestamp":"2024-10-31 10:57:25.857 AM"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","timestamp":"2024-10-31 10:57:25.880 AM"}
+{"context":"InstanceLoader","level":"info","message":"HttpModule dependencies initialized","timestamp":"2024-10-31 10:57:25.881 AM"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","timestamp":"2024-10-31 10:57:25.881 AM"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","timestamp":"2024-10-31 10:57:25.889 AM"}
+{"context":"InstanceLoader","level":"info","message":"SwapiModule dependencies initialized","timestamp":"2024-10-31 10:57:25.890 AM"}
+{"context":"InstanceLoader","level":"info","message":"UsersModule dependencies initialized","timestamp":"2024-10-31 10:57:25.891 AM"}
+{"context":"RoutesResolver","level":"info","message":"SwapiController {/api/v1/swapi}:","timestamp":"2024-10-31 10:57:25.898 AM"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/v1/swapi/personajes/:id, GET} route","timestamp":"2024-10-31 10:57:25.903 AM"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/v1/swapi/peliculas/:id, GET} route","timestamp":"2024-10-31 10:57:25.904 AM"}
+{"context":"RoutesResolver","level":"info","message":"UsersController {/api/v1/users}:","timestamp":"2024-10-31 10:57:25.905 AM"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/v1/users, POST} route","timestamp":"2024-10-31 10:57:25.907 AM"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/v1/users, GET} route","timestamp":"2024-10-31 10:57:25.908 AM"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/v1/users/:id, GET} route","timestamp":"2024-10-31 10:57:25.910 AM"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/v1/users/:id, PATCH} route","timestamp":"2024-10-31 10:57:25.911 AM"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/v1/users/:id, DELETE} route","timestamp":"2024-10-31 10:57:25.912 AM"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","timestamp":"2024-10-31 10:57:25.916 AM"}
+{"context":"bootstrap","level":"info","message":"Server listening: http://[::1]:3000","timestamp":"2024-10-31 10:57:25.921 AM"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","timestamp":"2024-10-31 10:58:19.255 AM"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","timestamp":"2024-10-31 10:58:19.275 AM"}
+{"context":"InstanceLoader","level":"info","message":"HttpModule dependencies initialized","timestamp":"2024-10-31 10:58:19.276 AM"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","timestamp":"2024-10-31 10:58:19.277 AM"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","timestamp":"2024-10-31 10:58:19.285 AM"}
+{"context":"InstanceLoader","level":"info","message":"SwapiModule dependencies initialized","timestamp":"2024-10-31 10:58:19.286 AM"}
+{"context":"InstanceLoader","level":"info","message":"UsersModule dependencies initialized","timestamp":"2024-10-31 10:58:19.287 AM"}
+{"context":"RoutesResolver","level":"info","message":"SwapiController {/api/v1/swapi}:","timestamp":"2024-10-31 10:58:19.317 AM"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/v1/swapi/personajes/:id, GET} route","timestamp":"2024-10-31 10:58:19.325 AM"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/v1/swapi/peliculas/:id, GET} route","timestamp":"2024-10-31 10:58:19.327 AM"}
+{"context":"RoutesResolver","level":"info","message":"UsersController {/api/v1/users}:","timestamp":"2024-10-31 10:58:19.329 AM"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/v1/users, POST} route","timestamp":"2024-10-31 10:58:19.331 AM"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/v1/users, GET} route","timestamp":"2024-10-31 10:58:19.333 AM"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/v1/users/:id, GET} route","timestamp":"2024-10-31 10:58:19.335 AM"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/v1/users/:id, PATCH} route","timestamp":"2024-10-31 10:58:19.336 AM"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/v1/users/:id, DELETE} route","timestamp":"2024-10-31 10:58:19.338 AM"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","timestamp":"2024-10-31 10:58:19.344 AM"}
+{"context":"bootstrap","level":"info","message":"Server listening: http://[::1]:3000","timestamp":"2024-10-31 10:58:19.354 AM"}
