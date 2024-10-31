@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "LOG\\.ff4d1d6c90529761e5734d1d53fbe8fb3f045a15-audit.json",
+    "files": [
+        {
+            "date": 1730389697020,
+            "name": "LOG\\API-SOFTTEK-INFO-2024-10-31.json",
+            "hash": "d34671f9fa8f72ef83e92343ef57828328b936f7607b097103cf89136edde530"
+        }
+    ],
+    "hashType": "sha256"
+}

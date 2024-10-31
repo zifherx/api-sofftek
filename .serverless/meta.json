@@ -1,0 +1,249 @@
+{
+  "S:\\NODE_APP\\api-softtek": {
+    "versionSfCore": null,
+    "versionFramework": "4.4.7",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeResolverProviders": {
+      "default-aws-credential-resolver": "<REDACTED>"
+    },
+    "composeServiceName": null,
+    "servicePath": "S:\\NODE_APP\\api-softtek",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "service": "aws-lambda-crud-softtek",
+      "frameworkVersion": "4",
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs20.x",
+        "architecture": "arm64",
+        "stage": "production",
+        "region": "us-east-2",
+        "memorySize": 2048,
+        "logRetentionInDays": 1,
+        "timeout": 15,
+        "versionFunctions": true,
+        "compiledCloudFormationTemplate": {
+          "AWSTemplateFormatVersion": "2010-09-09",
+          "Description": "The AWS CloudFormation template for this Serverless application",
+          "Resources": {
+            "ApiLogGroup": {
+              "Type": "AWS::Logs::LogGroup",
+              "Properties": {
+                "LogGroupName": "/aws/lambda/aws-lambda-crud-softtek-production-api",
+                "RetentionInDays": 1
+              }
+            },
+            "IamRoleLambdaExecution": {
+              "Type": "AWS::IAM::Role",
+              "Properties": {
+                "AssumeRolePolicyDocument": {
+                  "Version": "2012-10-17",
+                  "Statement": [
+                    {
+                      "Effect": "Allow",
+                      "Principal": {
+                        "Service": [
+                          "lambda.amazonaws.com"
+                        ]
+                      },
+                      "Action": [
+                        "sts:AssumeRole"
+                      ]
+                    }
+                  ]
+                },
+                "Policies": [
+                  {
+                    "PolicyName": {
+                      "Fn::Join": [
+                        "-",
+                        [
+                          "aws-lambda-crud-softtek",
+                          "production",
+                          "lambda"
+                        ]
+                      ]
+                    },
+                    "PolicyDocument": {
+                      "Version": "2012-10-17",
+                      "Statement": [
+                        {
+                          "Effect": "Allow",
+                          "Action": [
+                            "logs:CreateLogStream",
+                            "logs:CreateLogGroup",
+                            "logs:TagResource"
+                          ],
+                          "Resource": [
+                            {
+                              "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/aws-lambda-crud-softtek-production*:*"
+                            }
+                          ]
+                        },
+                        {
+                          "Effect": "Allow",
+                          "Action": [
+                            "logs:PutLogEvents"
+                          ],
+                          "Resource": [
+                            {
+                              "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/aws-lambda-crud-softtek-production*:*:*"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "Path": "/",
+                "RoleName": {
+                  "Fn::Join": [
+                    "-",
+                    [
+                      "aws-lambda-crud-softtek",
+                      "production",
+                      {
+                        "Ref": "AWS::Region"
+                      },
+                      "lambdaRole"
+                    ]
+                  ]
+                }
+              }
+            },
+            "ApiLambdaFunction": {
+              "Type": "AWS::Lambda::Function",
+              "Properties": {
+                "Code": {
+                  "S3Bucket": "serverless-framework-deployments-us-east-2-a00074c6-940e",
+                  "S3Key": "serverless/aws-lambda-crud-softtek/production/1730350844759-2024-10-31T05:00:44.759Z/aws-lambda-crud-softtek.zip"
+                },
+                "Handler": "dist/lambda.handler",
+                "Runtime": "nodejs20.x",
+                "FunctionName": "aws-lambda-crud-softtek-production-api",
+                "MemorySize": 2048,
+                "Timeout": 15,
+                "Architectures": [
+                  "arm64"
+                ],
+                "Role": {
+                  "Fn::GetAtt": [
+                    "IamRoleLambdaExecution",
+                    "Arn"
+                  ]
+                }
+              },
+              "DependsOn": [
+                "ApiLogGroup"
+              ]
+            },
+            "ApiLambdaVersion9QpnDr1FSmvnpfqfbyOkGyDLc7el2dVVXcDpFwb1c": {
+              "Type": "AWS::Lambda::Version",
+              "DeletionPolicy": "Retain",
+              "Properties": {
+                "FunctionName": {
+                  "Ref": "ApiLambdaFunction"
+                },
+                "CodeSha256": "VZawojX2Xq8VnOXEbL77tYXxDDRd2iI2GIVLCWmlm4Q="
+              }
+            }
+          },
+          "Outputs": {
+            "ServerlessDeploymentBucketName": {
+              "Value": "serverless-framework-deployments-us-east-2-a00074c6-940e",
+              "Export": {
+                "Name": "sls-aws-lambda-crud-softtek-production-ServerlessDeploymentBucketName"
+              }
+            },
+            "ApiLambdaFunctionQualifiedArn": {
+              "Description": "Current Lambda function version",
+              "Value": {
+                "Ref": "ApiLambdaVersion9QpnDr1FSmvnpfqfbyOkGyDLc7el2dVVXcDpFwb1c"
+              },
+              "Export": {
+                "Name": "sls-aws-lambda-crud-softtek-production-ApiLambdaFunctionQualifiedArn"
+              }
+            }
+          }
+        },
+        "vpc": {}
+      },
+      "functions": {
+        "api": {
+          "handler": "dist/lambda.handler",
+          "events": [
+            {
+              "method": "any",
+              "path": "/{proxy+}",
+              "httpApi": null
+            }
+          ],
+          "name": "aws-lambda-crud-softtek-production-api",
+          "package": {},
+          "memory": 2048,
+          "timeout": 15,
+          "runtime": "nodejs20.x",
+          "vpc": {},
+          "versionLogicalId": "ApiLambdaVersion9QpnDr1FSmvnpfqfbyOkGyDLc7el2dVVXcDpFwb1c"
+        }
+      },
+      "plugins": [
+        "serverless-jetpack",
+        "serverless-offline"
+      ]
+    },
+    "serviceRawFile": "service: aws-lambda-crud-softtek\r\nframeworkVersion: '4'\r\n\r\nprovider:\r\n  name: aws\r\n  runtime: nodejs20.x\r\n  architecture: arm64\r\n  stage: production\r\n  region: us-east-2\r\n  memorySize: 2048\r\n  logRetentionInDays: 1\r\n  timeout: 15\r\n\r\nfunctions:\r\n  api:\r\n    handler: dist/lambda.handler\r\n    events:\r\n      - httpApi:\r\n        method: any\r\n        path: /{proxy+}\r\n\r\nplugins:\r\n  - serverless-jetpack\r\n  - serverless-offline\r\n",
+    "command": [
+      "deploy"
+    ],
+    "options": {},
+    "error": null,
+    "params": {},
+    "machineId": "87c04f560e607e466d3c5726fd7e8e16",
+    "stage": "production",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "aca8da83-e8b9-438d-83df-03d7ec6b9a8b",
+    "orgName": "zifher",
+    "userId": "GNL26YpQnzKFnm06FW",
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "zifher",
+    "subscription": null,
+    "userEmail": "frojasq@ziphonex.com",
+    "serviceProviderAwsRegion": "us-east-2",
+    "serviceProviderAwsCredentials": "<REDACTED>",
+    "serviceProviderAwsAccountId": "122610513631",
+    "projectType": "traditional",
+    "versionSf": "4.4.7",
+    "serviceProviderAwsCfStackName": "aws-lambda-crud-softtek-production",
+    "integrations": {},
+    "serviceUniqueId": "arn:aws:cloudformation:us-east-2:122610513631:stack/aws-lambda-crud-softtek-production/1c31fb70-9745-11ef-a8c8-0aa28bcc48e9",
+    "serviceProviderAwsCfStackId": "arn:aws:cloudformation:us-east-2:122610513631:stack/aws-lambda-crud-softtek-production/1c31fb70-9745-11ef-a8c8-0aa28bcc48e9",
+    "serviceProviderAwsCfStackCreated": "2024-10-31T05:00:55.473Z",
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": "CREATE_COMPLETE",
+    "serviceProviderAwsCfStackOutputs": [
+      {
+        "OutputKey": "ApiLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:us-east-2:122610513631:function:aws-lambda-crud-softtek-production-api:1",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-aws-lambda-crud-softtek-production-ApiLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "ServerlessDeploymentBucketName",
+        "OutputValue": "serverless-framework-deployments-us-east-2-a00074c6-940e",
+        "ExportName": "sls-aws-lambda-crud-softtek-production-ServerlessDeploymentBucketName"
+      }
+    ]
+  }
+}

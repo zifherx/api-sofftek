@@ -1,0 +1,22 @@
+meta {
+  name: POST Users
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/api/v1/users
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Jorge Rojas",
+    "email": "george_rd58@hotmail.com",
+    "role": "Cliente",
+    "age": 64,
+    "country": "Peru",
+    "isActive" : false
+  }
+}
